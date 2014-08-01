@@ -1,7 +1,7 @@
 # ga (Google Analytic)
----
+
 ## Setup
----
+
 
 1. Add `wikichua/ga` to `composer.json`.
 ```
@@ -18,7 +18,7 @@
 1. Fill up `app/config/wikichua/config/ga.php`
 
 ## Usage
----
+
 1. Retrieve rows data in array.
 ```
 $Ga = Ga::make('74924308')
