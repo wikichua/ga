@@ -1,0 +1,21 @@
+{
+    "name": "wikichua/ga",
+    "description": "",
+    "authors": [
+        {
+            "name": "Wiki Chua",
+            "email": "wikichua@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "google/apiclient": "1.0.*@dev",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Wikichua\\Ga\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
