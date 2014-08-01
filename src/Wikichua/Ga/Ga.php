@@ -115,7 +115,7 @@ class Ga {
 
 	public function getAllSitesIds() {
 		if (empty($this->siteIDs)) {
-			$sites = $this->service->management_profiles->listManagementProfiles("~all", "~all");
+			$sites = $this->getProfiles()->listManagementProfiles("~all", "~all");
 			foreach($sites['items'] as $site) {
 				$this->siteIDs[$site['websiteUrl']] = 'ga:' . $site['id'];
 			}
@@ -133,7 +133,7 @@ class Ga {
 			return $this->siteIDs[$url];
 		}
 
-		throw new \Exception("Site $url is not present in your Analytics account.");
+		throw new \Exception("Site $url is not valid or permission denied in your Analytics account.");
 	}
 
 }
