@@ -5,7 +5,7 @@
 
 1. Add `wikichua/ga` to `composer.json`.
 ```
-# composer require wikichua/ga dev-master
+# composer require google/apiclient 1.0.*@dev wikichua/ga dev-master
 ```
 
 1. Add `'Wikichua\Ga\GaServiceProvider',` to `app/config/app.php` under providers array.
