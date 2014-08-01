@@ -1,4 +1,4 @@
-# ga (Google Analytic)
+# ga (Google Analytic) for Laravel 4
 
 ## Setup
 
