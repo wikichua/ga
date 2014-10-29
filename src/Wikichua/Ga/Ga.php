@@ -45,7 +45,7 @@ class Ga {
 			$metrics = '',
 			$dimensions = '',
 			$filters = '',
-			$others = [];
+			$others = array();
 
 	public function __call($method, $args) {
 		if(!in_array($method, array('make','to','from')))
@@ -64,7 +64,8 @@ class Ga {
 			$value = $args[0];
 			if($method == 'make')
 				{	
-				$this->metrics = $this->dimensions = $this->filters = $this->others = '';
+				$this->metrics = $this->dimensions = $this->filters = '';
+				$this->others = array();
 				$this->profileID = 'ga:'.str_replace('ga:', '', $value);
 			}
 			else
