@@ -48,6 +48,8 @@ class Ga {
 			$to = 'yesterday',
 			$from = '7daysAgo',
 			$metrics = '',
+			$dimensions = '',
+			$filters = '',
 			$others = [];
 
 	public function __call($method, $args) {
@@ -66,7 +68,10 @@ class Ga {
 		}else{
 			$value = $args[0];
 			if($method == 'make')
+				{	
+				$this->metrics = $this->dimensions = $this->filters = $this->others = '';
 				$this->profileID = 'ga:'.str_replace('ga:', '', $value);
+			}
 			else
 				$this->{$method} = $value;
 		}
