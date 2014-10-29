@@ -30,11 +30,6 @@ class Ga {
 	public function all() {
 		$metrics = $this->metrics == ''? 
 			'ga:'.str_replace('ga:', '', Config::get('ga::ga.metrics', '')):$this->metrics;
-		if(!isset($this->others['dimensions']))
-		{
-			$this->others['dimensions'] = 
-				'ga:'.str_replace('ga:', '', Config::get('ga::ga.dimensions', ''));
-		}
 		return $this->service->data_ga->get($this->profileID, $this->from, $this->to, $metrics, $this->others);
 	}
 
